@@ -1,0 +1,51 @@
+<%-include ('./partials/header'); %>
+
+  <br>
+  <div class="container">
+    <div class="text-center">
+      <h2>Producto</h2>
+    </div>
+    <br>
+    <form action="./edit-product" method="POST">
+      <input type="hidden" name="id" value="<%= product.id %>">
+      <div class="row">
+        <div class="col-12">
+          <label for="productname" class="form-label">Nombre del producto</label>
+          <input type="text" name="productname" id="productname" class="form-control" value="<%= product.productname %>">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-6">
+          <label for="price" class="form-label">Precio</label>
+          <input type="text" name="price" id="price" class="form-control" value="<%= product.price %>">
+        </div>
+        <div class="col-6">
+          <label for="type" class="form-label">Tipo</label>
+          <input type="text" name="type" id="type" class="form-control" value="<%= product.type %>">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-6">
+          <label for="categoriaId" class="form-label">Categoría</label>
+          <input type="text" name="categoriaId" id="categoriaId" class="form-control" value="<%= product.categoriaId %>">
+        </div>   
+      </div>
+      <br>
+      
+      <div class="row">
+        <div class="col-6">
+          <div class="float-start">
+            <button type="submit" class="btn primary-btn">Actualizar Producto</button>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="float-end">
+            <a href="./lista-producto" class="btn secondary-btn">Volver</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <%-include ('./partials/footer'); %>

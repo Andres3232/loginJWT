@@ -1,0 +1,38 @@
+<%-include ('./partials/header'); %>
+
+  <div class="container">
+    <div class="text-center">
+      <h2>Categorias</h2>
+    </div>
+    <br>
+    <form action="./add-categoria" method="POST">
+      <br>
+      <div class="row">
+        <div class="col-6">
+          <label for="name" class="form-label">Nombre Categoria</label>
+          <br>
+          <br>
+          <input type="text" name="name" id="name" class="form-control" required>
+        </div>
+
+        </div>
+        <br>
+        <br>
+        <div>
+        <div class="row">
+            <div class="col-6">
+              <div class="float-start">
+                <br>
+                <button type="submit" class="btn primary-btn">Agregar categoria</button>
+              </div>
+              <br>
+              <div class="col-6">
+                <div class="float-end">
+                  <a href="./lista-categoria" class="btn secondary-btn">Volver</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <%-include ('./partials/footer'); %>

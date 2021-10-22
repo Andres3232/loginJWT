@@ -1,0 +1,63 @@
+<%-include ('./partials/header'); %>
+
+<br>
+  <div class="row container centered" width="100vw">
+    <div class="text-center">
+      <h2>Tabla de productos</h2>
+    </div>
+    <br>
+    <br>
+    <br>
+    <table class="table table-hover">
+      <thead>
+        <th scope="col">Nombre Producto</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Categoría</th>
+        <th scope="col">Estado</th>
+
+      </thead>
+      <tbody>
+        <% products.forEach(function(product) { %>
+          <tr>
+            <td>
+              <%= product.productname %>
+            </td>
+            <td>
+              <%= product.price %>
+            </td>
+            <td>
+              <%= product.type %>
+            </td>
+            <td>
+              <%= product.categoriaId %>
+            </td>
+
+            <td>
+              <div class="row">
+                <div class="row">
+                  <form action="./edit-producto" method="GET">
+                    <input type="hidden" name="id" value="<%= product.id %>">
+                    <button type="submit" class="btn edit-btn"><i class="bi bi-pencil"></i></button>
+                  </form>
+                </div>
+                <div class="row"></div>
+                <div class="row">
+                  <form action="./delete-producto" method="POST">
+                    <input type="hidden" name="id" value="<%= product.id %>">
+                    <button type="submit" class="btn delete-btn"><i class="bi bi-trash"></i></button>
+                  </form>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <% }) %>
+      </tbody>
+    </table>
+    <br>
+    <br>
+    <div class="float-start">
+      <a href="./add-producto" class="btn primary-btn">Agregar producto</a>
+    </div>
+  </div>
+  <%-include ('./partials/footer'); %>

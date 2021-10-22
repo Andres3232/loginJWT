@@ -1,0 +1,83 @@
+<%-include ('./partials/header'); %>
+
+  <br>
+  <div class="container">
+    <div class="text-center">
+      <h2>Usuario</h2>
+    </div>
+    <br>
+    <form action="./edit-user" method="POST">
+      <input type="hidden" name="id" value="<%= user.id %>">
+      <div class="row">
+        <div class="col-12">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" name="username" id="username" class="form-control" value="<%= user.username %>">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-6">
+          <label for="email" class="form-label">Email</label>
+          <input type="text" name="email" id="email" class="form-control" value="<%= user.email %>">
+        </div>
+        <div class="col-6">
+          <label for="Telefono" class="form-label">Telefono</label>
+          <input type="text" name="Telefono" id="Telefono" class="form-control" value="<%= user.Telefono %>">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-6">
+          <label for="Ciudad" class="form-label">Ciudad</label>
+          <input type="text" name="Ciudad" id="Ciudad" class="form-control" value="<%= user.Ciudad %>">
+        </div>
+        <div class="col-6">
+          <label for="Estado" class="form-label">Estado</label>
+          <select name="Estado" id="Estado" class="form-select">
+            <option value="<%= user.Estado %>" selected>
+              <%= user.Estado %>
+            </option>
+            <option value="" selected disabled>Seleccione su Estado</option>
+            <option value="BS">Buenos aires</option>
+            <option value="CA">Capital federal</option>
+            <option value="CT">Catamarca</option>
+            <option value="CH">Chaco</option>
+            <option value="CO">Cordoba</option>
+            <option value="CI">Corrientes</option>
+            <option value="ER">Entre Rios</option>
+            <option value="FO">Formosa</option>
+            <option value="JU">Jujuy</option>
+            <option value="LP">La Pampa</option>
+            <option value="LR">La rioja</option>
+            <option value="ME">Mendoza</option>
+            <option value="MI">Misiones</option>
+            <option value="NE">Neuquen</option>
+            <option value="RN">Rio Negro</option>
+            <option value="SA">Salta</option>
+            <option value="SJ">San Juan</option>
+            <option value="SL">San Luis</option>
+            <option value="RJ">Santa Cruz</option>
+            <option value="SF">Santa Fe</option>
+            <option value="SE">Santiago del Estero</option>
+            <option value="TF">Tierra del fuego</option>
+            <option value="TU">Tucuman</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-6">
+          <div class="float-start">
+            <button type="submit" class="btn primary-btn">Actualizar usuario</button>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="float-end">
+            <a href="./lista" class="btn secondary-btn">Volver</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <%-include ('./partials/footer'); %>
+  

@@ -1,0 +1,32 @@
+<%-include ('./partials/header'); %>
+
+  <br>
+  <div class="container">
+    <div class="text-center">
+      <h2>Categoría</h2>
+    </div>
+    <br>
+    <form action="./edit-category" method="POST">
+      <input type="hidden" name="name" value="<%= category.name %>">
+      <div class="row">
+        <div class="col-12">
+          <label for="id" class="form-label">Nombre de la Categoria</label>
+          <input type="text" name="name" id="name" class="form-control" value="<%= category.name %>">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-6">
+          <div class="float-start">
+            <button type="submit" class="btn primary-btn">Actualizar Categoria</button>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="float-end">
+            <a href="./lista-categoria" class="btn secondary-btn">Volver</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <%-include ('./partials/footer'); %>

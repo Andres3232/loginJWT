@@ -1,0 +1,89 @@
+<%-include ('./partials/header'); %>
+
+  <br>
+  <div class="container">
+    <div class="text-center">
+      <h2>Tabla de Usuarios</h2>
+    </div>
+    <br>
+    <form action="./add-user" method="POST">
+      <div class="row">
+        <div class="col-12">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" required name="username" id="username" class="form-control">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-6">
+          <label for="email" class="form-label">Email</label>
+          <input type="email"required name="email" id="email" class="form-control">
+        </div>
+        <div class="col-6">
+          <label for="Telefono" class="form-label">Telefono</label>
+          <input type="number" required min="1" name="Telefono" id="Telefono" class="form-control">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-6">
+          <label for="Ciudad" class="form-label">Ciudad</label>
+          <input type="text" required name="Ciudad" id="Ciudad" class="form-control">
+        </div>
+        <div class="col-6">
+          <label for="Estado" class="form-label">Estado</label>
+          <select name="Estado" required id="Estado" class="form-select">
+            <option value="" selected disabled>Seleccione su Estado</option>
+            <option value="BS">Buenos aires</option>
+            <option value="CA">Capital federal</option>
+            <option value="CT">Catamarca</option>
+            <option value="CH">Chaco</option>
+            <option value="CO">Cordoba</option>
+            <option value="CI">Corrientes</option>
+            <option value="ER">Entre Rios</option>
+            <option value="FO">Formosa</option>
+            <option value="JU">Jujuy</option>
+            <option value="LP">La Pampa</option>
+            <option value="LR">La rioja</option>
+            <option value="ME">Mendoza</option>
+            <option value="MI">Misiones</option>
+            <option value="NE">Neuquen</option>
+            <option value="RN">Rio Negro</option>
+            <option value="SA">Salta</option>
+            <option value="SJ">San Juan</option>
+            <option value="SL">San Luis</option>
+            <option value="RJ">Santa Cruz</option>
+            <option value="SF">Santa Fe</option>
+            <option value="SE">Santiago del Estero</option>
+            <option value="TF">Tierra del fuego</option>
+            <option value="TU">Tucuman</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <label for="Rol" class="form-label">Rol</label>
+          <input type="text"required name="Rol" id="Rol" class="form-control">
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <label for="password" class="form-label">Password</label>
+            <input type="password"required name="Password" id="Password" class="form-control">
+          </div>
+      <br>
+      <div class="row">
+        <div class="col-6">
+          <div class="float-start">
+            <br>
+            <button type="submit" class="btn primary-btn">Agregar usuario</button>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="float-end">
+            <a href="./lista" class="btn secondary-btn">Volver</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <%-include ('./partials/footer'); %>
